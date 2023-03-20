@@ -18,6 +18,7 @@ namespace Demo.DataBase.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.HasOne(x => x.Product).WithMany(c => c.Carts).HasForeignKey(x => x.ProcductId);
+            builder.HasOne(x=>x.AppUser).WithMany(c=>c.Carts).HasForeignKey(x => x.UserId);
         }
     }
 }

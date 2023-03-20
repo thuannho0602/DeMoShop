@@ -12,3 +12,17 @@ D:\NguyenMinhThuan\Asp.Net\Deome01\Demo.DataBase\obj\Debug\net6.0\refint\Demo.Da
 D:\NguyenMinhThuan\Asp.Net\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.pdb
 D:\NguyenMinhThuan\Asp.Net\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.genruntimeconfig.cache
 D:\NguyenMinhThuan\Asp.Net\Deome01\Demo.DataBase\obj\Debug\net6.0\ref\Demo.DataBase.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\bin\Debug\net6.0\Demo.DataBase.deps.json
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\bin\Debug\net6.0\Demo.DataBase.runtimeconfig.json
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\bin\Debug\net6.0\Demo.DataBase.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\bin\Debug\net6.0\Demo.DataBase.pdb
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.csproj.AssemblyReference.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.GeneratedMSBuildEditorConfig.editorconfig
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.AssemblyInfoInputs.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.AssemblyInfo.cs
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.csproj.CoreCompileInputs.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\refint\Demo.DataBase.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.pdb
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\Demo.DataBase.genruntimeconfig.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.DataBase\obj\Debug\net6.0\ref\Demo.DataBase.dll

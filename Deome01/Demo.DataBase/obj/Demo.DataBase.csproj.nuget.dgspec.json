@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NguyenMinhThuan\\Asp.Net\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj": {}
+    "D:\\NguyenMinhThuan\\ASp_Net\\DeMoShop\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj": {}
   },
   "projects": {
-    "D:\\NguyenMinhThuan\\Asp.Net\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj": {
+    "D:\\NguyenMinhThuan\\ASp_Net\\DeMoShop\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NguyenMinhThuan\\Asp.Net\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj",
+        "projectUniqueName": "D:\\NguyenMinhThuan\\ASp_Net\\DeMoShop\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj",
         "projectName": "Demo.DataBase",
-        "projectPath": "D:\\NguyenMinhThuan\\Asp.Net\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj",
+        "projectPath": "D:\\NguyenMinhThuan\\ASp_Net\\DeMoShop\\Deome01\\Demo.DataBase\\Demo.DataBase.csproj",
         "packagesPath": "C:\\Users\\AD\\.nuget\\packages\\",
-        "outputPath": "D:\\NguyenMinhThuan\\Asp.Net\\Deome01\\Demo.DataBase\\obj\\",
+        "outputPath": "D:\\NguyenMinhThuan\\ASp_Net\\DeMoShop\\Deome01\\Demo.DataBase\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

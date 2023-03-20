@@ -1,0 +1,12 @@
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\bin\Debug\net6.0\Deme.Unitities.deps.json
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\bin\Debug\net6.0\Deme.Unitities.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\bin\Debug\net6.0\Deme.Unitities.pdb
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.csproj.AssemblyReference.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.GeneratedMSBuildEditorConfig.editorconfig
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.AssemblyInfoInputs.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.AssemblyInfo.cs
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.csproj.CoreCompileInputs.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\refint\Deme.Unitities.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\Deme.Unitities.pdb
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Deme.Unitities\obj\Debug\net6.0\ref\Deme.Unitities.dll

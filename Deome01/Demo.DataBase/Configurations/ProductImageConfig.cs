@@ -13,7 +13,11 @@ namespace Demo.DataBase.Configurations
     {
         public void Configure(EntityTypeBuilder<ProductImage> builder)
         {
-            
+            builder.ToTable("ProductImage");
+            builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).UseIdentityColumn();
+            builder.HasOne(K => K.Product).WithMany(pk => pk.ProductImages)
+               .HasForeignKey(pk => pk.ProductId);
         }
     }
 }

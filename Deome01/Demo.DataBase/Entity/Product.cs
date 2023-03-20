@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Demo.DataBase.Configurations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,5 +22,6 @@ namespace Demo.DataBase.Entity
         public List<OrderDatail> OrderDatails { get; set; }
         public List<Cart> Carts { get; set; }
         public List<ProductTranslation> ProductTranslations { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
     }
 }

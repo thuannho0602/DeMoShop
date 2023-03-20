@@ -1,0 +1,12 @@
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\bin\Debug\net6.0\Demo.ViewMode.deps.json
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\bin\Debug\net6.0\Demo.ViewMode.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\bin\Debug\net6.0\Demo.ViewMode.pdb
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.csproj.AssemblyReference.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.GeneratedMSBuildEditorConfig.editorconfig
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.AssemblyInfoInputs.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.AssemblyInfo.cs
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.csproj.CoreCompileInputs.cache
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\refint\Demo.ViewMode.dll
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\Demo.ViewMode.pdb
+D:\NguyenMinhThuan\ASp_Net\DeMoShop\Deome01\Demo.ViewMode\obj\Debug\net6.0\ref\Demo.ViewMode.dll

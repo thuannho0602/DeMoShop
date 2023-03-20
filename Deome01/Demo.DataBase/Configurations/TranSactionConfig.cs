@@ -16,7 +16,7 @@ namespace Demo.DataBase.Configurations
             builder.ToTable("TranSaction");
             builder.HasKey(t => t.Id);
             builder.Property(t => t.Id).UseIdentityColumn();
-            
+            builder.HasOne(t => t.AppUser).WithMany(x => x.Transactions).HasForeignKey(x => x.UserId);
         }
     }
 }

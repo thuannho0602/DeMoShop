@@ -1,6 +1,8 @@
 ﻿using Demo.DataBase.Configurations;
 using Demo.DataBase.Entity;
 using Demo.DataBase.Extensions;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Demo.DataBase.EF
 {
-    public class DemoDbcontext:DbContext
+    public class DemoDbcontext:IdentityDbContext<AppUser,AppRole,Guid>
     {
         public DemoDbcontext(DbContextOptions options):base(options)
         {
@@ -34,6 +36,17 @@ namespace Demo.DataBase.EF
             modelBuilder.ApplyConfiguration(new SlideConfig());
             modelBuilder.ApplyConfiguration(new TranSactionConfig());
 
+
+            //Uesr,ROle,
+            modelBuilder.ApplyConfiguration(new AppUserConfig());
+            modelBuilder.ApplyConfiguration(new AppRoleConfig());
+
+            modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("appUserClaim");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("appUserRole").HasKey(x => new {x.UserId,x.RoleId});
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("appUserLogin").HasKey(x=>x.UserId);
+
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("appRoleClaim");
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("appUserToken").HasKey(x => x.UserId);
             //base.OnModelCreating(modelBuilder);
 
             modelBuilder.Seed();
