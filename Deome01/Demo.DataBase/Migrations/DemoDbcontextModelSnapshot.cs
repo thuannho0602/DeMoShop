@@ -81,7 +81,7 @@ namespace Demo.DataBase.Migrations
                         new
                         {
                             Id = new Guid("30c3c812-22c7-41ee-8b82-b6d2ea0ae6cd"),
-                            ConcurrencyStamp = "5400e2da-18d4-4ab1-b572-5fe567bdd288",
+                            ConcurrencyStamp = "6d04c782-95ed-4dc6-bac3-0779d9ccc149",
                             Description = "Administrator role",
                             Name = "admin",
                             NormalizedName = "admin"
@@ -158,7 +158,7 @@ namespace Demo.DataBase.Migrations
                         {
                             Id = new Guid("1bf6041a-0963-4eb7-bbdc-0ab25b0e301d"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ac7e4249-9c38-4a6c-bf82-c509202358b5",
+                            ConcurrencyStamp = "bf0b3adf-99fc-41c2-9151-2ba3f798ac9e",
                             DOB = new DateTime(2020, 1, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "thuannho0602@gmail.com",
                             EmailConfirmed = true,
@@ -167,7 +167,7 @@ namespace Demo.DataBase.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "thuannho0602@gmail.com",
                             NormalizedUserName = "admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOg67clfmft7SmLTZk2VxzlyYiaXonZhtF8ZZuQhLeczvymCZsGPD+Qiq2JrOyMZEw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKo4zQ6ZVK3e/Rq5hX59niPIetqWBZ3T4R7AH5eEU/7gnPwM+X+/Q11s5IDZuB89Gg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,
@@ -395,9 +395,7 @@ namespace Demo.DataBase.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("OrderDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 3, 20, 9, 50, 40, 872, DateTimeKind.Local).AddTicks(9771));
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("OrderStatus")
                         .HasColumnType("int");
@@ -494,7 +492,7 @@ namespace Demo.DataBase.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreacted = new DateTime(2023, 3, 20, 9, 50, 40, 876, DateTimeKind.Local).AddTicks(2335),
+                            DateCreacted = new DateTime(2023, 3, 20, 17, 32, 25, 527, DateTimeKind.Local).AddTicks(1149),
                             IsFeaatured = false,
                             Originalprice = 10000m,
                             Price = 2000m,
@@ -504,7 +502,7 @@ namespace Demo.DataBase.Migrations
                         new
                         {
                             Id = 2,
-                            DateCreacted = new DateTime(2023, 3, 20, 9, 50, 40, 876, DateTimeKind.Local).AddTicks(2352),
+                            DateCreacted = new DateTime(2023, 3, 20, 17, 32, 25, 527, DateTimeKind.Local).AddTicks(1159),
                             IsFeaatured = false,
                             Originalprice = 10000m,
                             Price = 2000m,
@@ -541,11 +539,14 @@ namespace Demo.DataBase.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<int>("SortOrder")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductImages");
+                    b.ToTable("ProductImage", (string)null);
                 });
 
             modelBuilder.Entity("Demo.DataBase.Entity.ProductInCategory", b =>
@@ -1019,7 +1020,7 @@ namespace Demo.DataBase.Migrations
             modelBuilder.Entity("Demo.DataBase.Entity.ProductImage", b =>
                 {
                     b.HasOne("Demo.DataBase.Entity.Product", "Product")
-                        .WithMany()
+                        .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1112,6 +1113,8 @@ namespace Demo.DataBase.Migrations
                     b.Navigation("Carts");
 
                     b.Navigation("OrderDatails");
+
+                    b.Navigation("ProductImages");
 
                     b.Navigation("ProductInCategories");
 

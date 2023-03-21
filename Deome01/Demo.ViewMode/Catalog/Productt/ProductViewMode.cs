@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.Application.Catalog.Productt.Dtos
+namespace Demo.ViewMode.Catalog.Productt
 {
     public class ProductViewMode
     {
@@ -15,7 +15,7 @@ namespace Demo.Application.Catalog.Productt.Dtos
         public int Stock { get; set; }
         public int ViewCount { get; set; }
         public DateTime DateCreacted { get; set; }
-        
+
 
         //Entity ProductTranslaion
         public string Name { set; get; }

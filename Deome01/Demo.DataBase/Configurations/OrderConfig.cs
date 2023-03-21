@@ -16,7 +16,7 @@ namespace Demo.DataBase.Configurations
             builder.ToTable("Order");
             builder.HasKey(c => c.Id);
             builder.Property(c => c.ShipEmail).IsUnicode(false).HasMaxLength(50).IsRequired();
-            builder.Property(c =>c.OrderDate).HasDefaultValue(DateTime .Now);
+            builder.Property(c =>c.OrderDate);
             builder.Property(c => c.ShipName).HasMaxLength(50).IsRequired();
             builder.Property(c=>c.ShipAddress).HasMaxLength(50).IsRequired();
             builder.Property(c => c.ShipPhoneNumber).HasMaxLength(50).IsRequired();

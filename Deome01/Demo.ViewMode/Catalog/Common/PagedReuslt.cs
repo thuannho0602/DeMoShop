@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo.ViewMode.Common
+namespace Demo.ViewMode.Catalog.Common
 {
     public class PagedReuslt<T>
     {

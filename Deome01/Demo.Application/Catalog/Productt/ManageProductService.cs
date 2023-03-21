@@ -1,11 +1,12 @@
 ﻿using Deme.Unitities.Exceptions;
-using Demo.Application.Catalog.Productt.Dtos;
 using Demo.Application.Common;
 using Demo.DataBase.EF;
 using Demo.DataBase.Entity;
-using Demo.ViewMode.Common;
-using Demo.ViewMode.Productt.Manage;
+using Demo.ViewMode.Catalog.Common;
+using Demo.ViewMode.Catalog.Productt;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Server.IISIntegration;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -58,8 +59,27 @@ namespace Demo.Application.Catalog.Productt
                 }
 
             };
+            //luu ảnh
+            if(request.ThumbnailImage!=null)
+            {
+                product.ProductImages = new List<ProductImage>()
+                {
+                    new ProductImage()
+                    {
+                        Caption="ThumbnailImage",
+                        DateCreated=DateTime.Now,
+                        FileSize=request.ThumbnailImage.Length,
+                        ImagePath=await this.SaveFile(request.ThumbnailImage),
+                        IsDefault=true,
+                        SortOrder=1
+
+
+                    }
+                };
+            }
             _context.Products.Add(product);
-            return await _context.SaveChangesAsync();
+             await _context.SaveChangesAsync();
+            return (product.Id);
 
 
         }
@@ -71,14 +91,24 @@ namespace Demo.Application.Catalog.Productt
             {
                 throw new DemoExceptions($"cannot find a product:{productId}");
             }
+            var images = _context.ProductImages.Where(i =>i.ProductId == productId);
+           foreach(var image in images)
+            {
+
+
+                _storageService.DeleteFileAsync(image.ImagePath);
+                
+            }
             _context.Remove(product);
+           
+           
             return await _context.SaveChangesAsync();
         }
 
        
 
 
-        public async Task<PagedReuslt<ProductViewMode>> GetAllPaging(GetProductPadingRequest request)
+        public async Task<PagedReuslt<ProductViewMode>> GetAllPaging(GetManageProductPagingRequest request)
         {
             //1 select join
             var query = from p in _context.Products
@@ -138,23 +168,37 @@ namespace Demo.Application.Catalog.Productt
         }
 
 
-        public async Task<int> Update(ProductUpdateRequest reguest)
+        public async Task<int> Update(ProductUpdateRequest request)
         {
-            var product = await _context.Products.FindAsync(reguest.Id);
-            var productTranslations = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == reguest.Id
-            && x.LanguageId == reguest.LanguageId);
+            var product = await _context.Products.FindAsync(request.Id);
+            var productTranslations = await _context.ProductTranslations.FirstOrDefaultAsync(x => x.ProductId == request.Id
+            && x.LanguageId == request.LanguageId);
             if (product == null || productTranslations == null)
             {
-                throw new DemoExceptions($"cannot find a product:{reguest.Id}");
+                throw new DemoExceptions($"cannot find a product:{request.Id}");
             }
-            productTranslations.Name = reguest.Name;
-            productTranslations.SeoAlias = reguest.SeoAlias;
-            productTranslations.SeoDescription = reguest.SeoDescription;
-            productTranslations.SeoTitle = reguest.SeoTitle;
-            productTranslations.Description = reguest.Description;
-            productTranslations.Details = reguest.Details;
+            productTranslations.Name = request.Name;
+            productTranslations.SeoAlias = request.SeoAlias;
+            productTranslations.SeoDescription = request.SeoDescription;
+            productTranslations.SeoTitle = request.SeoTitle;
+            productTranslations.Description = request.Description;
+            productTranslations.Details = request.Details;
+            //update
+            //Save image
+            if (request.ThumbnailImage != null)
+            {
+                var thumbnailImage = await _context.ProductImages.FirstOrDefaultAsync(i => i.IsDefault == true && i.ProductId == request.Id);
+                if (thumbnailImage != null)
+                {
+                    thumbnailImage.FileSize = request.ThumbnailImage.Length;
+                    thumbnailImage.ImagePath = await this.SaveFile(request.ThumbnailImage);
+                    _context.ProductImages.Update(thumbnailImage);
+                }
+            }
+
             return await _context.SaveChangesAsync();
         }
+
 
         public async Task<bool> UpdatePrice(int productId, decimal newPrice)
         {
@@ -181,6 +225,42 @@ namespace Demo.Application.Catalog.Productt
             return fileName;
         }
 
+        public async  Task<int> AddImage(int productId, List<FormFile> files)
+        {
+            //var product = await _context.Products.FindAsync(productId);
+            //return product;
+            throw new NotImplementedException();
+        }
+
+        public Task<int> RemevoImage(int imageId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> UpdateImage(int imageId, string caption, bool IDefault)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ProductImageViewModel>> GetListImage(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ProductViewMode> GetById(int productId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PagedReuslt<ProductViewMode>> GetAllByCategoryId(GetPublicProcductPagingRequest request)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<List<ProductViewMode>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

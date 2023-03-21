@@ -14,7 +14,8 @@ namespace Demo.DataBase.Entity
         public string Caption { get; set; }
         public bool IsDefault { get; set; }
         public DateTime DateCreated { get; set; }
-        public long Filesize { get; set; }
+        public int SortOrder { get; set; }
+        public long FileSize { get; set; }
 
         // Đi Đến Entity Product Xét Khóa Ngoại
         public Product Product { get; set; }

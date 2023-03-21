@@ -1,7 +1,6 @@
-﻿
-using Demo.Application.Catalog.Productt.Dtos;
-using Demo.ViewMode.Common;
-using Demo.ViewMode.Productt.Manage;
+﻿using Demo.ViewMode.Catalog.Common;
+using Demo.ViewMode.Catalog.Productt;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +14,7 @@ namespace Demo.Application.Catalog.Productt
     {
         Task<int> Creact(ProductCraectRequest request);
 
-        Task<int> Update(ProductUpdateRequest reguest);
+        Task<int> Update(ProductUpdateRequest request);
 
         Task<int> Delete(int productId);
 
@@ -25,8 +24,15 @@ namespace Demo.Application.Catalog.Productt
 
         Task AddViewCount(int productId);
 
-       
+        Task<ProductViewMode> GetById(int productId);
 
-        Task<PagedReuslt<ProductViewMode>> GetAllPaging(GetProductPadingRequest request);
+        Task<PagedReuslt<ProductViewMode>> GetAllPaging(GetManageProductPagingRequest request);
+
+        Task<int>AddImage(int productId,List<FormFile>files);
+
+        Task<int> RemevoImage(int imageId );
+
+        Task<int> UpdateImage(int imageId,string caption,bool IDefault);
+        Task<List<ProductImageViewModel>> GetListImage(int productId);
     }
 }

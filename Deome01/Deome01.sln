@@ -11,7 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Application", "Demo.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Deme.Unitities", "Deme.Unitities\Deme.Unitities.csproj", "{495F03C2-E1A6-4D37-A4EC-9A823A4678E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.ViewMode", "Demo.ViewMode\Demo.ViewMode.csproj", "{3F7A0BB9-DFC5-43E8-BD3C-35D87EDF2FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.ViewMode", "Demo.ViewMode\Demo.ViewMode.csproj", "{3F7A0BB9-DFC5-43E8-BD3C-35D87EDF2FC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Infrastructure", "1. Infrastructure", "{31A5F09B-F283-440D-BD53-6BE057155860}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domain", "2. Domain", "{0EE07C9D-6471-4039-B1E0-610A42A7A897}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Hosts", "3. Hosts", "{6EE8EE26-F2A4-421E-9EF8-7A6945923AFD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +48,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E88FFFD9-579D-4CE8-A347-D211CACA3D96} = {6EE8EE26-F2A4-421E-9EF8-7A6945923AFD}
+		{BB2187D8-8533-4B68-AF59-56472847FBCD} = {0EE07C9D-6471-4039-B1E0-610A42A7A897}
+		{73048BB4-5362-47F4-AFE9-777744D43677} = {0EE07C9D-6471-4039-B1E0-610A42A7A897}
+		{495F03C2-E1A6-4D37-A4EC-9A823A4678E7} = {31A5F09B-F283-440D-BD53-6BE057155860}
+		{3F7A0BB9-DFC5-43E8-BD3C-35D87EDF2FC2} = {31A5F09B-F283-440D-BD53-6BE057155860}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {89041923-CB5B-4343-A66C-41FFDAD88620}
