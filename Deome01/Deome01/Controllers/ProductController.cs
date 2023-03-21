@@ -1,4 +1,4 @@
-﻿using Demo.Application.Catalog.Productt;
+﻿using Demo.Application.Catalog.Producttt;
 using Demo.ViewMode.Catalog.Productt;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +9,9 @@ namespace Demo.API.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private IManageProductService _publicProductService;
+        private IPublicProductService _publicProductService;
         private IManageProductService _manaGeProductService;
-        public ProductController(IManageProductService publicProductService, IManageProductService manaGeProductService)
+        public ProductController(IPublicProductService publicProductService, IManageProductService manaGeProductService)
         {
             _publicProductService = publicProductService;
             _manaGeProductService = manaGeProductService;
@@ -39,7 +39,7 @@ namespace Demo.API.Controllers
             return Ok(product);
         }
         [HttpPost]
-        public async Task<IActionResult> Creact([FromBody]ProductCraectRequest request)
+        public async Task<IActionResult> Creact([FromForm]ProductCraectRequest request)
         {
             var productId = await _manaGeProductService.Creact(request);
             if (productId == 0)
@@ -50,7 +50,7 @@ namespace Demo.API.Controllers
             return CreatedAtAction(nameof(GetById), new {id=productId},productId);
         }
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] ProductUpdateRequest request)
+        public async Task<IActionResult> Update([FromForm] ProductUpdateRequest request)
         {
             var affectedResult = await _manaGeProductService.Update(request);
             if (affectedResult == 0)

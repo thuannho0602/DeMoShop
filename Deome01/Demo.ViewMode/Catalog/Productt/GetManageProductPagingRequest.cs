@@ -13,6 +13,6 @@ namespace Demo.ViewMode.Catalog.Productt
 
         public string LanguageId { get; set; }
 
-        public int CategoryIds { get; set; }
+        public int  CategoryIds { get; set; }
     }
 }

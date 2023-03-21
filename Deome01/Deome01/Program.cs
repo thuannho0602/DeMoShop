@@ -1,10 +1,13 @@
 ﻿using Deme.Unitities.Constast;
-using Demo.Application.Catalog.Productt;
-using Demo.Application.Common;
+using Demo.Application.Catalog.Commonn;
+using Demo.Application.Catalog;
+using Demo.Application.Catalog.Producttt;
 using Demo.DataBase.EF;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Protocols;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,10 +22,16 @@ builder.Services.AddDbContext<DemoDbcontext>(options =>
 
 });
 
+//Declare DI
+builder.Services.AddTransient<IStorageService,FileStorageService>();
+
+builder.Services.AddTransient<IPublicProductService, PublicProductService>();
+
+builder.Services.AddTransient<IManageProductService, ManageProductService>();
 
 
-builder.Services.AddTransient<IManageProductService,ManageProductService>();
-builder.Services.AddTransient<IPublicProductService1, PublicProductSerivce>();
+
+
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
